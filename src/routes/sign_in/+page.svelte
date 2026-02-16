@@ -2,6 +2,7 @@
 	import { login } from '$lib/api';
 	import { goto } from '$app/navigation';
 	import Button, { Label } from '@smui/button';
+	import bgImage1 from '/src/lib/assets/킥보드-removebg-preview.png';
 
 	let email = '';
 	let password = '';
@@ -25,7 +26,10 @@
 </script>
 
 <main>
-	<div class="center-container">
+	<div
+		class="center-container"
+		style="background-image:url('{bgImage1}'); background-size: 50% auto; background-repeat: no-repeat;"
+	>
 		<h1>로그인</h1>
 
 		<input type="email" placeholder="이메일" bind:value={email} />
@@ -53,7 +57,7 @@
 		justify-content: center;
 		height: 100vh;
 		gap: 1rem;
-		background-color: #d8faa8;
+		background-color: rgb(213, 248, 193);
 		padding: 2rem;
 		box-sizing: border-box;
 	}

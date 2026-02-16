@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import bgImage1 from '/src/lib/assets/헬멧-removebg-preview.png';
 
 	import TopAppBar, { Row, Section, Title } from '@smui/top-app-bar';
 	import IconButton from '@smui/icon-button';
@@ -121,11 +122,17 @@
 		>
 			<Label>킥보드 구매</Label>
 		</Button>
+		<div
+			style="background-image: url({bgImage1}); background-size: 50% auto; background-repeat: no-repeat;"
+		></div>
 	{:else}
 		<p>킥보드가 준비되었습니다! 즐거운 라이딩 되세요!</p>
 		<Button variant="outlined" color="secondary" onclick={() => returnKickboard()}>
 			<Label>킥보드 반납</Label>
 		</Button>
+		<div
+			style="background-image: url({bgImage1}); background-size: 50% auto; background-repeat: no-repeat;"
+		></div>
 	{/if}
 </main>
 

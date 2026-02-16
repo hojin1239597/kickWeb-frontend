@@ -1,11 +1,14 @@
 <script lang="ts">
 	import Button, { Label } from '@smui/button';
-	import MenuSurface from '@smui/menu-surface';
+	import bgImage1 from '/src/lib/assets/킥보드-removebg-preview.png';
 </script>
 
 <main>
-	<div class="center-container">
-		<h1>kick-app</h1>
+	<div
+		class="center-container"
+		style="background-image:url('{bgImage1}'); background-size: 50% auto; background-repeat: no-repeat;"
+	>
+		<h1>kick-web</h1>
 		<div class="block"></div>
 		<div class="block"></div>
 		<a href="sign_in">

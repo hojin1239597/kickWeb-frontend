@@ -1,5 +1,5 @@
 <script>
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/apple-icon-removebg-preview.png';
 </script>
 
 <svelte:head>

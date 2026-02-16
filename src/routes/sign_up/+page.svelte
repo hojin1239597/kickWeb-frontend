@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Button, { Label } from '@smui/button';
 	import { signUp } from '$lib/api';
+	import bgImage1 from '/src/lib/assets/킥보드-removebg-preview.png';
 
 	let email = '';
 	let password = '';
@@ -13,7 +14,10 @@
 </script>
 
 <main>
-	<div class="center-container">
+	<div
+		class="center-container"
+		style="background-image:url('{bgImage1}'); background-size: 50% auto; background-repeat: no-repeat;"
+	>
 		<h1>회원가입</h1>
 
 		<input bind:value={email} placeholder="이메일" />
