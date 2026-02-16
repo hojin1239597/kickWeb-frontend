@@ -30,7 +30,11 @@
 	async function loadMe() {
 		const res = await fetch(`https://kickweb-backend.onrender.com/me/${email}`);
 		const data = await res.json();
-
+		if (!data) {
+			alert('사용자 정보를 불러오는데 실패했습니다.');
+			location.href = '/'; // 이메일 없으면 로그인 페이지로
+			return;
+		}
 		points = data.points ?? 0;
 		kickboard = !!data.kickboard;
 	}
@@ -96,7 +100,7 @@
 <TopAppBar variant="static" color="primary">
 	<Row>
 		<Section>
-			<Title>Kick App</Title>
+			<Title onclick={() => (location.href = '/')} style="cursor: pointer;">Kick App</Title>
 		</Section>
 		<Section align="end" toolbar>
 			<Button onclick={() => (pointDialogOpen = true)}>
