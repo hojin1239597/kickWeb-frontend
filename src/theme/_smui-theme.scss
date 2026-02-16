@@ -1,28 +1,25 @@
 @use 'sass:color';
 
+// 컬러 팔레트
 @use '@material/theme/color-palette';
 
-// Svelte Colors!
-@use '@material/theme/index' as theme with (
-	$primary: rgb(93, 158, 82),
-	$secondary: #676778,
+// Svelte Colors! — 한 번만 with 옵션 사용
+@use '@material/theme' as theme with (
+	$primary: #6bcf7f,
+	$secondary: #3a7afe,
 	$surface: #fff,
 	$background: #d8faa8,
 	$error: #b71c1c
 );
 
+// 다른 모듈
 @use '@material/button/mixins' as mdc-button;
-
-@use '@material/theme' with (
-	$primary: #6bcf7f,
-	$secondary: #3a7afe
-);
-
 @use '@material/top-app-bar/mdc-top-app-bar';
 @use '@material/button/mdc-button';
 @use '@material/dialog/mdc-dialog';
 @use '@material/icon-button/mdc-icon-button';
 
+// 스타일 규칙
 html,
 body {
 	background-color: theme.$surface;
