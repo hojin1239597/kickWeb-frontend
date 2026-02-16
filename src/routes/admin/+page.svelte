@@ -29,7 +29,7 @@
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
 				email: user.email,
-				points: Number(user.points),
+				points: user.points,
 				kickboard: user.kickboard
 			})
 		});
