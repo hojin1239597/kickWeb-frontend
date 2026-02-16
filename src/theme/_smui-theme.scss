@@ -1,0 +1,43 @@
+@use 'sass:color';
+
+@use '@material/theme/color-palette';
+
+// Svelte Colors!
+@use '@material/theme/index' as theme with (
+	$primary: rgb(93, 158, 82),
+	$secondary: #676778,
+	$surface: #fff,
+	$background: #d8faa8,
+	$error: #b71c1c
+);
+
+@use '@material/button/mixins' as mdc-button;
+
+.button-shaped-round {
+	border-radius: 30% !important;
+}
+
+@use '@material/theme' with (
+	$primary: #6bcf7f,
+	$secondary: #3a7afe
+);
+
+@use '@material/top-app-bar/mdc-top-app-bar';
+@use '@material/button/mdc-button';
+@use '@material/dialog/mdc-dialog';
+@use '@material/icon-button/mdc-icon-button';
+
+html,
+body {
+	background-color: theme.$surface;
+	color: theme.$on-surface;
+	margin: 0;
+	font-family: Roboto, sans-serif;
+}
+
+a {
+	color: #40b3ff;
+}
+a:visited {
+	color: color.scale(#40b3ff, $lightness: -35%);
+}
