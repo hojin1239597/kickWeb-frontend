@@ -13,10 +13,6 @@
 
 @use '@material/button/mixins' as mdc-button;
 
-.button-shaped-round {
-	border-radius: 30% !important;
-}
-
 @use '@material/theme' with (
 	$primary: #6bcf7f,
 	$secondary: #3a7afe
@@ -40,4 +36,8 @@ a {
 }
 a:visited {
 	color: color.scale(#40b3ff, $lightness: -35%);
+}
+
+.button-shaped-round {
+	border-radius: 30% !important;
 }
