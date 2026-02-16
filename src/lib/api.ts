@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://kickweb-backend.onrender.com';
 
 export async function login({ email, password }: { email: string; password: string }) {
 	try {

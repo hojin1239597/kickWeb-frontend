@@ -28,7 +28,7 @@
 	});
 
 	async function loadMe() {
-		const res = await fetch(`http://127.0.0.1:8000/me/${email}`);
+		const res = await fetch(`https://kickweb-backend.onrender.com/me/${email}`);
 		const data = await res.json();
 
 		points = data.points ?? 0;
@@ -37,7 +37,7 @@
 
 	// 포인트 구매
 	async function buyPoints(amount: number) {
-		const res = await fetch('http://127.0.0.1:8000/points/add', {
+		const res = await fetch('https://kickweb-backend.onrender.com/points/add', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ email, amount })
@@ -58,7 +58,7 @@
 			return;
 		}
 
-		const res = await fetch('http://127.0.0.1:8000/kickboard/buy', {
+		const res = await fetch('https://kickweb-backend.onrender.com/kickboard/buy', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ email })
@@ -75,7 +75,7 @@
 	}
 
 	async function returnKickboard() {
-		const res = await fetch('http://127.0.0.1:8000/kickboard/return', {
+		const res = await fetch('https://kickweb-backend.onrender.com/kickboard/return', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ email })

@@ -19,12 +19,12 @@
 	let users: any[] = [];
 
 	async function loadUsers() {
-		const res = await fetch('http://127.0.0.1:8000/admin/users');
+		const res = await fetch('https://kickweb-backend.onrender.com/admin/users');
 		users = await res.json();
 	}
 
 	async function save(user) {
-		await fetch('http://127.0.0.1:8000/admin/adjust', {
+		await fetch('https://kickweb-backend.onrender.com/admin/adjust', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
@@ -40,7 +40,7 @@
 	async function delete_user(user) {
 		if (!confirm(`정말 ${user.email}을(를) 삭제하시겠습니까?`)) return;
 
-		await fetch('http://127.0.0.1:8000/admin/delete', {
+		await fetch('https://kickweb-backend.onrender.com/admin/delete', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({ email: user.email })

@@ -12,7 +12,7 @@
 
 		if (res.success) {
 			// admin 계정이면 관리자 페이지
-			if (email === 'admin@gmail.com' && password === 'admin') {
+			if (email === 'admin' && password === 'admin') {
 				goto('/admin');
 			} else {
 				// 일반 유저
