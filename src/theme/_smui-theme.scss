@@ -13,9 +13,9 @@
 );
 
 // 다른 모듈
-@use '@material/button/mixins' as mdc-button;
+@use '@material/button/mixins' as mdc-button-mixins;
 @use '@material/top-app-bar/mdc-top-app-bar';
-@use '@material/button/mdc-button';
+@use '@material/button/mdc-button' as mdc-button;
 @use '@material/dialog/mdc-dialog';
 @use '@material/icon-button/mdc-icon-button';
 
