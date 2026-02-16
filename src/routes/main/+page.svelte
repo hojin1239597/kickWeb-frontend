@@ -100,7 +100,7 @@
 		</Section>
 		<Section align="end" toolbar>
 			<Button onclick={() => (pointDialogOpen = true)}>
-				<Label>💰 {points} P</Label>
+				<Label style="color: white;">💰 {points} P</Label>
 			</Button>
 			<IconButton class="material-icons">account_circle</IconButton>
 		</Section>
