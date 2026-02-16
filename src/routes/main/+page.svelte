@@ -130,9 +130,9 @@
 		<Button variant="outlined" color="secondary" onclick={() => returnKickboard()}>
 			<Label>킥보드 반납</Label>
 		</Button>
-		<div
+		<divx
 			style="background-image: url({bgImage1}); background-size: 50% auto; background-repeat: no-repeat;"
-		></div>
+		></divx>
 	{/if}
 </main>
 
