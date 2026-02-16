@@ -1,8 +1,7 @@
 @use 'sass:color';
-
 @use '@material/theme/color-palette';
 
-// Svelte Colors! (Dark Theme)
+// Dark Theme - 여기서만 @use ... with 설정
 @use '@material/theme/index' as theme with (
 	$primary: #ff3e00,
 	$secondary: color.scale(#676778, $whiteness: -10%),
@@ -11,10 +10,8 @@
 	$error: color-palette.$red-700
 );
 
-@use '@material/theme' with (
-	$primary: #6bcf7f,
-	$secondary: #3a7afe
-);
+// 다른 @material/theme는 with 없이 불러오기
+@use '@material/theme' as mt;
 
 @use '@material/top-app-bar/mdc-top-app-bar';
 @use '@material/button/mdc-button';
@@ -25,7 +22,7 @@ html,
 body {
 	margin: 0;
 	font-family: Roboto, sans-serif;
-	background-color: #000;
+	background-color: theme.$background;
 	color: theme.$on-surface;
 }
 
